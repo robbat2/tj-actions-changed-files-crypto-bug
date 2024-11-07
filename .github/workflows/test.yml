@@ -25,5 +25,5 @@ jobs:
         shell: bash
         run: |
           cat <<EOF
-          ${{ steps.changed-files.outputs }}
+          ${{ toJson(steps.changed-files.outputs) }}
           EOF
