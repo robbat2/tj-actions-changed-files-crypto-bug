@@ -20,3 +20,10 @@ jobs:
         with:
           files: |
             **.txt
+      - id: print
+        name: Print
+        shell: bash
+        run: |
+          cat <<EOF
+          ${{ steps.changed-files.outputs }}
+          EOF
